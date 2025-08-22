@@ -9,8 +9,8 @@ const Footer = () => {
       {/* Address Section */}
       <div style={{ maxWidth: "1200px", margin: "0 auto", textAlign: "center" }}>
         <h3 style={{ marginBottom: "10px" }}>Contact Us</h3>
-        <p>123 Auction St, Mumbai, India</p>
-        <p>Email: info@lambda.com | Phone: +91 1234567890</p>
+        <p>IIT Hyderabad</p>
+        <p>Email: lambda@iith.ac.in | Phone: 1234567890</p>
       </div>
 
       {/* Marquee Section */}
