@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   const marqueeText = "Made with ❤️ by Lambda";
-  const gap = "\u00A0\u00A0\u00A0\u00A0\u00A0"; // 4 non-breaking spaces
+  const gap = "\u00A0\u00A0\u00A0\u00A0\u00A0";
 
   return (
     <footer style={{ backgroundColor: "#222", color: "#fff", padding: "40px 20px" }}>

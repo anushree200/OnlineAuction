@@ -49,8 +49,18 @@ const LoginPage = () => {
           justifyContent: 'center',
           gap: '80px',
         }}>
-          <button style={buttonStyle}>Browse Auctions</button>
-          <button style={buttonStyle}>Start Selling +</button>
+          <button
+            className="gradient-btn"
+            style={buttonStyle}
+          >
+              Browse Auctions
+          </button>
+          <button
+            className="shimmer-btn"
+            style={buttonStyle}
+          >
+              Start Selling +
+          </button>
         </div>
 
         {/* Section Heading */}
@@ -95,15 +105,14 @@ const LoginPage = () => {
 };
 
 const buttonStyle = {
-  background: "rgba(255, 255, 255, 0.1)",
-  backdropFilter: "blur(12px)",
+  background: "linear-gradient(90deg, #ff0099, #8000ff)",
   borderRadius: "50px",
   color: "white",
   padding: "12px 32px",
   fontSize: "20px",
-  boxShadow: "0 0 20px 10px rgba(255,0,150,0.7), 0 0 80px 20px rgba(128,0,255,0.7)",
   border: "none",
-  cursor: "pointer"
+  cursor: "pointer",
+  transition: "background-position 0.4s"
 };
 
 const Card = ({ title, text }) => (

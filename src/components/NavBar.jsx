@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [hovered, setHovered] = useState(null);
@@ -32,14 +33,14 @@ const Navbar = () => {
         zIndex: 2,
       }}
     >
-      <a
-        href="#login"
+      <Link
+        to="/home"
         style={getLinkStyle("login")}
         onMouseEnter={() => setHovered("login")}
         onMouseLeave={() => setHovered(null)}
       >
         Login
-      </a>
+      </Link>
       <a
         href="#signup"
         style={getLinkStyle("signup")}
