@@ -16,12 +16,13 @@ const Navbar = () => {
   });
 
   return (
+
     <div
       style={{
         position: "absolute",
-        top: "50px",
+        top: "60px",
         left: "80%",
-        transform: "translateX(-50%)",
+        transform: "translateX(-60%)",
         background: "rgba(255, 255, 255, 0.1)",
         backdropFilter: "blur(12px)",
         borderRadius: "50px",
@@ -33,6 +34,14 @@ const Navbar = () => {
         zIndex: 2,
       }}
     >
+      <Link
+        to="/"
+        style={getLinkStyle("home")}
+        onMouseEnter={() => setHovered("home")}
+        onMouseLeave={() => setHovered(null)}
+      >
+        Home
+      </Link>
       <Link
         to="/home"
         style={getLinkStyle("login")}
