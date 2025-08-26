@@ -65,11 +65,6 @@ const LoginPage = () => {
             placeholder="Password"
             style={inputStyle}
           />
-          <input
-            type="tel"
-            placeholder="Phone Number"
-            style={inputStyle}
-          />
 
           <button style={buttonStyle}>
             Sign In

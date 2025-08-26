@@ -3,7 +3,20 @@ import Aurora from './components/aurora';
 import Particles from './components/particles';
 import NavBar from './components/NavBar';
 import Footer from "./components/Footer";
+import { useNavigate } from "react-router-dom";
+
+
 const LoginPage = () => {
+  const navigate = useNavigate();
+
+  const handlestartSelling = () => {
+    const isloggedin = localStorage.getItem("isLoggedIn");
+    if(isloggedin){
+      navigate("/user");
+    } else {
+      navigate("/signup");
+    }
+  }
   return (
     <div style={{
       backgroundColor: 'black',
@@ -52,18 +65,19 @@ const LoginPage = () => {
           <button
             className="gradient-btn"
             style={buttonStyle}
+            onClick={() => navigate("/auctions")}
           >
               Browse Auctions
           </button>
           <button
             className="shimmer-btn"
             style={buttonStyle}
+            onClick={handlestartSelling}
           >
               Start Selling +
           </button>
         </div>
 
-        {/* Section Heading */}
         <h1 style={{
           color: 'white',
           textAlign: 'center',
@@ -74,7 +88,6 @@ const LoginPage = () => {
           Why Choose Our Platform?
         </h1>
 
-        {/* Cards Section */}
         <div style={{
           display: "flex",
           justifyContent: "space-between",

@@ -41,16 +41,16 @@ const Navbar = () => {
       >
         Login
       </Link>
-      <a
-        href="#signup"
+      <Link
+        to="/signup"
         style={getLinkStyle("signup")}
         onMouseEnter={() => setHovered("signup")}
         onMouseLeave={() => setHovered(null)}
       >
         Signup
-      </a>
+      </Link>
       <a
-        href="#auctions"
+        href="/auctions"
         style={getLinkStyle("auctions")}
         onMouseEnter={() => setHovered("auctions")}
         onMouseLeave={() => setHovered(null)}
