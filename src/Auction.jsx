@@ -62,7 +62,7 @@ const Auction = () => {
             color: "white",
             }}
         >
-            {loading?(<h1>Loading Auctions...</h1>):(auctions.length==0?(<h1>No auctions available</h1>):(
+            {loading?(<h1>Loading Auctions...</h1>):(auctions.length===0?(<h1>No auctions available</h1>):(
                 <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(300px,1fr))",gap:"20px",width:"90%"}}>
                     {auctions.map((auction)=>(
                         <div key={auction.id} style={{backgroundColor:"rgba(255,255,255,0.1)",padding:"20px",borderRadius:"15px",boxShadow:"0 0 20px rgba(255,0,150,0.5)"}}>

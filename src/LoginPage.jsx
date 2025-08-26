@@ -14,7 +14,7 @@ const LoginPage = () => {
     if(isloggedin){
       navigate("/user");
     } else {
-      navigate("/signup");
+      navigate("/user");
     }
   }
   return (

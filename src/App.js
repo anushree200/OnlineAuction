@@ -5,6 +5,7 @@ import LoginPage from './LoginPage.jsx';
 import HomePage from './HomePage.jsx';
 import CreateAccount from './CreateAccount.jsx';
 import Auction from './Auction.jsx';
+import User from './User.jsx';
 function App() {
   return (
     <Router>
@@ -13,6 +14,7 @@ function App() {
         <Route path="/home" element={<HomePage />} />
         <Route path="/signup" element={<CreateAccount />} />
         <Route path="/auctions" element={<Auction />} />
+        <Route path="/user" element={<User />} />
       </Routes>
     </Router>
   );
