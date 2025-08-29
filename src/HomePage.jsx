@@ -3,8 +3,37 @@ import Aurora from "./components/aurora";
 import Particles from "./components/particles";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import { useState } from "react";
 
 const LoginPage = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = async() => {
+    try {
+      const response = await fetch("http://localhost:8080/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body : JSON.stringify({ username, password }),
+      }
+      );
+
+      const data = await response.json();
+      if(response.ok){
+        alert("Login Success");
+        console.log("Token:", data.token);
+        localStorage.setItem("token", data.token);
+      }else {
+        alert(`Login Failed: ${data.message}`);
+      }
+    }catch (error) {
+      console.error("Error logging in:", error);
+      alert("Something went wrong!");
+    }
+  }
+
   return (
     <div style={{
       backgroundColor: 'black',
@@ -66,7 +95,7 @@ const LoginPage = () => {
             style={inputStyle}
           />
 
-          <button style={buttonStyle}>
+          <button style={buttonStyle} onClick={() => handleLogin()}>
             Sign In
           </button>
         </div>
